@@ -4,15 +4,15 @@ import { Logo, Heart, Plus, Chat } from "../../../icons";
 function Header() {
   return (
     <View style={styles.header}>
-      <Logo size={104} fill="#000" />
+      <Logo size={110} fill="#000" />
       <View style={styles.actions}>
-        <TouchableOpacity activeOpacity="" style={styles.button}>
+        <TouchableOpacity style={styles.button}>
           <Plus size={24} fill="#000" />
         </TouchableOpacity>
-        <TouchableOpacity activeOpacity="0.6" style={styles.button}>
+        <TouchableOpacity style={styles.button}>
           <Heart size={24} fill="#000" />
         </TouchableOpacity>
-        <TouchableOpacity activeOpacity="0.6" style={styles.button}>
+        <TouchableOpacity style={styles.button}>
           <Chat size={24} fill="#000" />
         </TouchableOpacity>
       </View>
