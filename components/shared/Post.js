@@ -13,26 +13,34 @@ function Post({ post }) {
               uri: post.user.avatar,
             }}
           />
-          <Text style={styles.text}>{post.user.name}</Text>
+          <Text style={styles.title}>{post.user.name}</Text>
         </View>
         <More size={20} fill="#262626" />
       </View>
       <FitImage src={post.image} />
-      <View style={styles.actions}>
-        <View style={styles.leftActions}>
+      <View style={styles.content}>
+        <View style={styles.actions}>
+          <View style={styles.leftActions}>
+            <TouchableOpacity>
+              <Heart size={24} fill="#222" style={styles.action} />
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Comment size={24} fill="#222" style={styles.action} />
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Message size={24} fill="#222" style={styles.action} />
+            </TouchableOpacity>
+          </View>
           <TouchableOpacity>
-            <Heart size={24} fill="#222" style={styles.action} />
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <Comment size={24} fill="#222" style={styles.action} />
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <Message size={24} fill="#222" style={styles.action} />
+            <Bookmark size={24} fill="#222" />
           </TouchableOpacity>
         </View>
-        <TouchableOpacity>
-          <Bookmark size={24} fill="#222" style={styles.action} /> 
-        </TouchableOpacity>
+        <View>
+          <Text style={styles.likes}>{post.likes} Likes</Text>
+        </View>
+        <View>
+          <Text>{post.user.name}</Text>
+        </View>
       </View>
     </View>
   );
@@ -58,22 +66,27 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
   },
-  text: {
+  title: {
     fontSize: 14,
     fontWeight: "600",
+  },
+  content: {
+    paddingHorizontal: 15,
   },
   actions: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
     height: 40,
-    paddingHorizontal: 15,
   },
   leftActions: {
-    flexDirection: 'row',
-
-  },  
+    flexDirection: "row",
+  },
   action: {
     marginRight: 12,
+  },
+  likes: {
+    fontWeight: '600 ',
+
   }
 });

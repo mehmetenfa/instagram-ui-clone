@@ -7,7 +7,7 @@ export default [
     comments: 24,
     image: 'https://miro.medium.com/max/1400/1*fopzpyNMN9GPvAIKdsZdaA.png',
     user: {
-      name: "Mehmet Enfa",
+      name: "mhmt.enfa",
       avatar:
         "https://pbs.twimg.com/profile_images/1610177519495385090/gkpozyxi_400x400.jpg",
     },
