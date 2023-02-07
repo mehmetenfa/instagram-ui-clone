@@ -39,7 +39,11 @@ function Post({ post }) {
           <Text style={styles.likes}>{post.likes} Likes</Text>
         </View>
         <View>
-          <Text>{post.user.name}</Text>
+          <Text>
+            <Text style={styles.user}>{post.user.name}</Text>
+            {`  `}
+            {post.description}
+          </Text>
         </View>
       </View>
     </View>
@@ -55,7 +59,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     height: 49,
     paddingHorizontal: 15,
-  },
+  }, 
   avatar: {
     width: 30,
     height: 30,
@@ -86,7 +90,10 @@ const styles = StyleSheet.create({
     marginRight: 12,
   },
   likes: {
-    fontWeight: '600 ',
+    fontWeight: "600 ",
+  },
+  user: {
+    fontWeight: '600',
 
   }
 });
