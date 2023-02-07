@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet, Image } from "react-native";
 import { More } from "../../icons";
+import FitImage from "./FitImage";
 
 function Post({ post }) {
   return (
@@ -12,10 +13,11 @@ function Post({ post }) {
               uri: post.user.avatar,
             }}
           />
-          <Text style={styles.title}>{post.user.name}</Text>
+          <Text style={styles.text}>{post.user.name}</Text>
         </View>
         <More size={20} fill="#262626" />
       </View>
+      <FitImage src={post.image} />
     </View>
   );
 }
@@ -40,8 +42,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: 'center',
   },
-  title: {
-    fontSize: 14,
+  text: {
+    fontSize: 14 ,
     fontWeight: '600',
   },
 });
