@@ -5,7 +5,7 @@ export default [
     date: "2023-02-06 10:00:00",
     likes: 100,
     comments: 24,
-    image: 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: 'https://miro.medium.com/max/1400/1*fopzpyNMN9GPvAIKdsZdaA.png',
     user: {
       name: "Mehmet Enfa",
       avatar:

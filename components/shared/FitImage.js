@@ -3,8 +3,8 @@ import { Image, Dimensions } from "react-native";
 function FitImage({ src }) {
 
     const width = Dimensions.get('window').width
-    const ratio = 1129 / width
-    const height = 750 / ratio
+    const ratio = 1194 / width
+    const height = 760 / ratio
 
 
     return (
