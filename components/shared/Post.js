@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { More, Heart, Message, Bookmark, Comment } from "../../icons";
 import FitImage from "./FitImage";
+import Clamp from "react-multiline-clamp";
 
 function Post({ post }) {
   return (

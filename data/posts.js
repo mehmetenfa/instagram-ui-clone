@@ -1,7 +1,7 @@
 export default [
   {
     id: 1,
-    description: `Sekmeler arasi ui senkronizasyonu saglamak icin BroadcastChannel API kullanabileceğinizi biliyor musunuz? Prototurk.com'a gidin ve 2 sekme açıp koyu moda geçmeyi deneyin ya da giriş yapmayı deneyin her iki sekmeninde senkron şekilde çalışacağını göreceksiniz. Bunu nasıl yapacağınız ve sonucu gösteren görsel ve videoyu inceleyebilirsiniz :)`,
+    description: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.`,
     date: "2023-02-06 10:00:00",
     likes: 100,
     comments: 24,
