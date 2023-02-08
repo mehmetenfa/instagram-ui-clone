@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { More, Heart, Message, Bookmark, Comment } from "../../icons";
 import FitImage from "./FitImage";
-import Clamp from "react-multiline-clamp";
+import ReadMore from "@fawazahmed/react-native-read-more";
 
 function Post({ post }) {
   return (
@@ -36,16 +36,22 @@ function Post({ post }) {
             <Bookmark size={24} fill="#222" />
           </TouchableOpacity>
         </View>
-        <View>
+        <View style={{ marginBottom: 5 }}>
           <Text style={styles.likes}>{post.likes} Likes</Text>
         </View>
-        <View>
-          <Text>
+        <ReadMore
+          numberOfLines={2}
+          seeMoreStyle={{ color: "#999" }}
+          expandOnly={true}
+          seeMoreText="more"
+        >
             <Text style={styles.user}>{post.user.name}</Text>
             {`  `}
             {post.description}
-          </Text>
-        </View>
+        </ReadMore>
+        <TouchableOpacity style={{ paddingVertical: 8 }}>
+          <Text style={styles.comments}>View all {post.comment} comments</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -60,7 +66,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     height: 49,
     paddingHorizontal: 15,
-  }, 
+  },
   avatar: {
     width: 30,
     height: 30,
@@ -94,7 +100,10 @@ const styles = StyleSheet.create({
     fontWeight: "600 ",
   },
   user: {
-    fontWeight: '600',
-
-  }
+    fontWeight: "600",
+  },
+  comments: {
+    opacity: 0.5,
+    fontWeight: "500",
+  },
 });
