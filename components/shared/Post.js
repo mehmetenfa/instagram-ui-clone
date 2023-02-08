@@ -2,6 +2,10 @@ import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { More, Heart, Message, Bookmark, Comment } from "../../icons";
 import FitImage from "./FitImage";
 import ReadMore from "@fawazahmed/react-native-read-more";
+import dayjs from "dayjs";
+import relativeTime from 'dayjs/plugin/relativeTime'
+
+dayjs.extend(relativeTime)
 
 function Post({ post }) {
   return (
@@ -52,6 +56,9 @@ function Post({ post }) {
         <TouchableOpacity style={{ paddingVertical: 8 }}>
           <Text style={styles.comments}>View all {post.comment} comments</Text>
         </TouchableOpacity>
+        <View>
+            <Text style={styles.date}>{dayjs(post.date).fromNow()}</Text>
+        </View>
       </View>
     </View>
   );
@@ -105,5 +112,9 @@ const styles = StyleSheet.create({
   comments: {
     opacity: 0.5,
     fontWeight: "500",
+  },
+  date: {
+    fontSize: 13,
+    opacity: 0.5,
   },
 });
