@@ -56,8 +56,9 @@ function Post({ post }) {
         <TouchableOpacity style={{ paddingVertical: 8 }}>
           <Text style={styles.comments}>View all {post.comment} comments</Text>
         </TouchableOpacity>
-        <View>
+        <View style={{flexDirection: 'row', alignItems: 'center'}}>
             <Text style={styles.date}>{dayjs(post.date).fromNow()}</Text>
+            <Text style={styles.translation}>See Translation</Text>
         </View>
       </View>
     </View>
@@ -116,5 +117,10 @@ const styles = StyleSheet.create({
   date: {
     fontSize: 13,
     opacity: 0.5,
+  },
+  translation: {
+    fontSize: 13,
+    fontWeight: '600',
+    marginLeft: 10
   },
 });
