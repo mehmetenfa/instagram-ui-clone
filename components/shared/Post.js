@@ -3,9 +3,9 @@ import { More, Heart, Message, Bookmark, Comment } from "../../icons";
 import FitImage from "./FitImage";
 import ReadMore from "@fawazahmed/react-native-read-more";
 import dayjs from "dayjs";
-import relativeTime from 'dayjs/plugin/relativeTime'
+import relativeTime from "dayjs/plugin/relativeTime";
 
-dayjs.extend(relativeTime)
+dayjs.extend(relativeTime);
 
 function Post({ post }) {
   return (
@@ -48,17 +48,22 @@ function Post({ post }) {
           seeMoreStyle={{ color: "#999" }}
           expandOnly={true}
           seeMoreText="more"
+          wrapperStyle={{marginBottom: 7}}
         >
-            <Text style={styles.user}>{post.user.name}</Text>
-            {`  `}
-            {post.description}
+          <Text style={styles.user}>{post.user.name}</Text>
+          {`  `}
+          {post.description}
         </ReadMore>
-        <TouchableOpacity style={{ paddingVertical: 8 }}>
-          <Text style={styles.comments}>View all {post.comment} comments</Text>
-        </TouchableOpacity>
-        <View style={{flexDirection: 'row', alignItems: 'center'}}>
-            <Text style={styles.date}>{dayjs(post.date).fromNow()}</Text>
-            <Text style={styles.translation}>See Translation</Text>
+        {post.comment > 0 && (
+          <TouchableOpacity style={{ paddingBottom: 7 }}>
+            <Text style={styles.comments}>
+              View all {post.comment} comments
+            </Text>
+          </TouchableOpacity>
+        )}
+        <View style={{ flexDirection: "row", alignItems: "center" }}>
+          <Text style={styles.date}>{dayjs(post.date).fromNow()}</Text>
+          <Text style={styles.translation}>See Translation</Text>
         </View>
       </View>
     </View>
@@ -120,7 +125,7 @@ const styles = StyleSheet.create({
   },
   translation: {
     fontSize: 13,
-    fontWeight: '600',
-    marginLeft: 10
+    fontWeight: "600",
+    marginLeft: 10,
   },
 });
