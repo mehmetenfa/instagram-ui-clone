@@ -9,7 +9,7 @@ dayjs.extend(relativeTime);
 
 function Post({ post }) {
   return (
-    <View>
+    <View style={styles.post}>
       <View style={styles.header}>
         <View style={styles.username}>
           <Image
@@ -73,6 +73,9 @@ function Post({ post }) {
 export default Post;
 
 const styles = StyleSheet.create({
+  post: {
+    marginBottom: 30
+  },
   header: {
     flexDirection: "row",
     alignItems: "center",
