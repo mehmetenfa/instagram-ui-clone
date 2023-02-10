@@ -3,12 +3,8 @@ import Header from "./components/Header";
 import Stories from "./components/Stories";
 import Post from "../../components/shared/Post";
 import posts from "../../data/posts";
+import Divider from "../../components/shared/Divider";
 
-function Divider() {
-    return (
-        <View style={{height: 0.5, backgroundColor: '#DADADA'}} />
-    )
-}
 
 function Home() {
   return (

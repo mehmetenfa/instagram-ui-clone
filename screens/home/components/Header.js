@@ -10,6 +10,7 @@ function Header() {
           <Plus size={24} fill="#000" />
         </TouchableOpacity>
         <TouchableOpacity style={styles.button}>
+          <View style={styles.dot} />
           <Heart size={24} fill="#000" />
         </TouchableOpacity>
         <TouchableOpacity style={styles.button}>
@@ -25,7 +26,7 @@ export default Header;
 const styles = StyleSheet.create({
   header: {
     height: 44,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
@@ -37,5 +38,17 @@ const styles = StyleSheet.create({
   },
   button: {
     marginLeft: 20,
+  },
+  dot: {
+    position: "absolute",
+    top: 0,
+    right: 0,
+    backgroundColor: "#FE3650",
+    width: 10,
+    height: 10,
+    borderRadius: 10,
+    zIndex: 2,
+    borderWidth: 2,
+    borderColor: '#fff',
   },
 });

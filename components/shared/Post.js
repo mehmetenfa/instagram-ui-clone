@@ -120,7 +120,6 @@ const styles = StyleSheet.create({
   },
   comments: {
     opacity: 0.5,
-    fontWeight: "500",
   },
   date: {
     fontSize: 13,
