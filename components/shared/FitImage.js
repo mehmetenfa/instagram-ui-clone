@@ -1,10 +1,10 @@
 import { Image, Dimensions } from "react-native";
 
-function FitImage({ src }) {
+function FitImage({ media }) {
 
     const width = Dimensions.get('window').width
-    const ratio = 1194 / width
-    const height = 760 / ratio
+    const ratio = media.width / width
+    const height = media.height / ratio
 
 
     return (
@@ -14,7 +14,7 @@ function FitImage({ src }) {
             height,
         }}
             source={{
-            uri: src
+            uri: media.src
         }} 
       />
     )

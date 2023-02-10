@@ -22,7 +22,9 @@ function Post({ post }) {
         </View>
         <More size={20} fill="#262626" />
       </View>
-      <FitImage src={post.image} />
+      {post.medias.map((media, index) => (
+        <FitImage key={index} media={media} />
+      ))}
       <View style={styles.content}>
         <View style={styles.actions}>
           <View style={styles.leftActions}>
@@ -48,7 +50,7 @@ function Post({ post }) {
           seeMoreStyle={{ color: "#999" }}
           expandOnly={true}
           seeMoreText="more"
-          wrapperStyle={{marginBottom: 7}}
+          wrapperStyle={{ marginBottom: 7 }}
         >
           <Text style={styles.user}>{post.user.name}</Text>
           {`  `}
@@ -74,7 +76,7 @@ export default Post;
 
 const styles = StyleSheet.create({
   post: {
-    marginBottom: 30
+    marginBottom: 30,
   },
   header: {
     flexDirection: "row",

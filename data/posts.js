@@ -5,7 +5,13 @@ export default [
     date: "2023-2-8     11:00:00",
     likes: 100,
     comment: 22,
-    image: 'https://miro.medium.com/max/1400/1*fopzpyNMN9GPvAIKdsZdaA.png',
+    medias: [
+      {
+        src: 'https://miro.medium.com/max/1400/1*fopzpyNMN9GPvAIKdsZdaA.png',
+        width: 1194,
+        height: 760,
+      }
+    ],
     user: {
       name: "mhmt.enfa",
       avatar:
@@ -18,7 +24,13 @@ export default [
     date: "2023-2-8     11:00:00",
     likes: 100,
     comment: 22,
-    image: 'https://miro.medium.com/max/1400/1*fopzpyNMN9GPvAIKdsZdaA.png',
+    medias: [
+      {
+        src: 'https://miro.medium.com/max/1400/1*5JPIKUMSdBGo7KTQCc31FA.png',
+        width: 1102,
+        height: 616,
+      }
+    ],
     user: {
       name: "mhmt.enfa",
       avatar:
