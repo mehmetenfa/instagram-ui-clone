@@ -10,7 +10,9 @@ function Header() {
           <Plus size={24} fill="#000" />
         </TouchableOpacity>
         <TouchableOpacity style={styles.button}>
-          <View style={styles.dot} />
+          <View style={styles.dotContainer}>
+            <View style={styles.dot} />
+          </View>
           <Heart size={24} fill="#000" />
         </TouchableOpacity>
         <TouchableOpacity style={styles.button}>
@@ -40,15 +42,21 @@ const styles = StyleSheet.create({
     marginLeft: 20,
   },
   dot: {
+    backgroundColor: "#FE3650",
+    width: 8,
+    height: 8,
+    borderRadius: 10,
+  },
+  dotContainer: {
+    zIndex: 2,
+    backgroundColor: "#fff",
+    width: 11,
+    height: 11,
+    borderRadius: 13,
+    alignItems: "center",
+    justifyContent: "center",
     position: "absolute",
     top: 0,
     right: 0,
-    backgroundColor: "#FE3650",
-    width: 10,
-    height: 10,
-    borderRadius: 10,
-    zIndex: 2,
-    borderWidth: 2,
-    borderColor: '#fff',
   },
 });
