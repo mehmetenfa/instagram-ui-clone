@@ -7,5 +7,3 @@
 ## Demo
 ![isntagramUI](https://user-images.githubusercontent.com/106542921/220308932-12edeac1-a65a-4f71-bf95-21dacd64468a.jpg)
 
-## Project Link
-coming soon...
